@@ -12,8 +12,9 @@ public class DBConnection {
 	private static DBConnection instance = null;
 
 	private DBConnection() {
+		//
 		String url = driver + databaseName + userName + password;
-
+		
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			System.out.println("Load af class ok");

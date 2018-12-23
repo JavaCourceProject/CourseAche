@@ -295,6 +295,7 @@ public class AppointmentGUI extends JPanel {
 		IFDBAppointment dbApp = new DBAppointment();
 		ArrayList<Appointment> apps = dbApp.getAllAppointment(true);
 
+		// Sorting
 //		for (Appointment app : apps) {
 //			if (((Integer) app.getID()).toString().toLowerCase().contains(searchFilter.toLowerCase())
 //						|| app.getDate().toLowerCase().contains(searchFilter.toLowerCase())

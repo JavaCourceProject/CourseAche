@@ -8,9 +8,17 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.Time;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 //import java.util.Date;
 
 import javax.swing.BorderFactory;
@@ -105,7 +113,7 @@ public class AppointmentGUI extends JPanel {
 		textField_appId.setEditable(false); // doctorId not editable
 		
 		textField_date = new JTextField();
-		textField_date.setText(new SimpleDateFormat("dd/MM/yyyy")
+		textField_date.setText(new SimpleDateFormat("yyyy-MM-dd")
 				.format(Calendar.getInstance().getTime()));
 		textField_time = new JTextField();
 		textField_patient = new JTextField();
@@ -169,25 +177,39 @@ public class AppointmentGUI extends JPanel {
 		showAllApp();
 
 		// Create button
-		btnCreate.addActionListener(new ActionListener() {
+		btnCreate.addActionListener(new ActionListener() {		
 			public void actionPerformed(ActionEvent e) {
+
+				String time_format = "";
+
 				if (!textField_appId.getText().isEmpty()) {
 					JOptionPane.showMessageDialog(null, "Please clear appointment fields before create one", "Error",
 							JOptionPane.ERROR_MESSAGE);
+					System.out.println("177");
 				} else {
-//					try {
-//						appCtr.insertApp(
-//								textField_date.getText()), 
-//								textField_time.getText(),
-//								textField_patient.getText(), 
-//								textField_doctor.getText(), 
-//								textField_medicine.getText());
-//						JOptionPane.showMessageDialog(null, "The appointment is created", "Create appointment",
-//								JOptionPane.INFORMATION_MESSAGE);
-//					} catch (Exception ex) {
-//						JOptionPane.showMessageDialog(null, "Please input correct values", "Error",
-//								JOptionPane.ERROR_MESSAGE);
-//					}
+					
+					time_format = textField_time.getText();
+
+					
+					
+					//Time validation
+					if (time_format.length() <= 5){
+						time_format = time_format + ":00";
+					}
+
+					try {
+						appCtr.insertApp(
+								textField_date.getText(), 
+								java.sql.Time.valueOf(time_format),
+								Integer.parseInt(textField_patient.getText()), 
+								Integer.parseInt(textField_doctor.getText()), 
+								Integer.parseInt(textField_medicine.getText()));
+						JOptionPane.showMessageDialog(null, "The appointment is created", "Create appointment",
+								JOptionPane.INFORMATION_MESSAGE);
+					} catch (Exception ex) {
+						JOptionPane.showMessageDialog(null, "Please input correct values", "Error",
+								JOptionPane.ERROR_MESSAGE);
+					}
 					cleanTextField();
 					showAllApp();
 				}

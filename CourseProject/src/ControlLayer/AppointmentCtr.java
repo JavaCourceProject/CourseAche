@@ -10,11 +10,13 @@ import DBLayer.IFDBAppointment;
 import ModelLayer.Appointment;
 
 public class AppointmentCtr {
+	
 	public AppointmentCtr() {
 	}
 
 	// Insert appointment
-	public int insertApp(Date date, Time time, int patient, int doctor, int medicine) {
+	public int insertApp(String date, Time time, int patient, int doctor, int medicine) {
+		System.out.println("19");
 		int appId = 0;
 		Appointment app = new Appointment();
 		app.setDate(date);
@@ -53,7 +55,7 @@ public class AppointmentCtr {
 	}
 
 	// Update doctor
-	public void updateAppointment(int appId, Date date, Time time, int patient, int doctor, int medicine) {
+	public void updateAppointment(int appId, String date, Time time, int patient, int doctor, int medicine) {
 		Appointment app = new Appointment();
 		app.setID(appId);
 		app.setDate(date);

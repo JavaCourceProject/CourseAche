@@ -28,8 +28,8 @@ public class DBAppointment implements IFDBAppointment {
 
 	@Override
 	public int insertAppointment(Appointment app) {
-		int nextId = GetMaxId.getMaxId("Select max(doctorId) from doctor") + 1;
-		String query = "INSERT INTO appointment(appointmentId, date, time, patient, doctor, medicine) VALUES('"
+		int nextId = GetMaxId.getMaxId("Select max(appointmentId) from appointment") + 1;
+		String query = "INSERT INTO appointment(appointmentId, date, time, personID, doctorID, medicineID) VALUES('"
 				+ nextId
 				+ "','"
 				+ app.getDate()
@@ -62,9 +62,9 @@ public class DBAppointment implements IFDBAppointment {
 		String query = "UPDATE appointment SET " 
 				+ "date = '" + appointmentObj.getDate() + "'," 
 				+ "time = '" + appointmentObj.getTime() + "'," 
-				+ "patient = '" + appointmentObj.getPatient() + "'," 
-				+ "doctor = '" + appointmentObj.getDoctor() + "',"
-				+ "medicine = '" + appointmentObj.getMedicine() + "'"
+				+ "personID = '" + appointmentObj.getPatient() + "'," 
+				+ "doctorID = '" + appointmentObj.getDoctor() + "',"
+				+ "medicineID = '" + appointmentObj.getMedicine() + "'"
 				+ " WHERE doctorId = '" + appointmentObj.getID() + "'";
 		System.out.println("Update query:" + query);
 		try {
@@ -154,7 +154,7 @@ public class DBAppointment implements IFDBAppointment {
 	}
 
 	private String buildQuery(String wClause) {
-		String query = "SELECT appointmentId, date, time, patient, doctor, medicine FROM appointment";
+		String query = "SELECT appointmentID, date, time, personID, doctorID, medicineID FROM appointment";
 
 		if (wClause.length() > 0)
 			query = query + " WHERE " + wClause;

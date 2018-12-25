@@ -318,17 +318,18 @@ public class AppointmentGUI extends JPanel {
 		ArrayList<Appointment> apps = dbApp.getAllAppointment(true);
 
 		// Sorting
-//		for (Appointment app : apps) {
-//			if (((Integer) app.getID()).toString().toLowerCase().contains(searchFilter.toLowerCase())
-//						|| app.getDate().toLowerCase().contains(searchFilter.toLowerCase())
-//						|| app.getTime().toLowerCase().contains(searchFilter.toLowerCase()))
-//				try {
-//					appTableModel.addRow(new Object[] { app.getID(), app.getDate(), app.getTime(),
-//							app.getPatient(), app.getDoctor(), app.getMedicine() });
-//				} catch (Exception e) {
-//					JOptionPane.showMessageDialog(null, e, "Error", JOptionPane.ERROR_MESSAGE);
-//				}
-//		}
+		for (Appointment app : apps) {
+			if (((Integer) app.getID()).toString().toLowerCase().contains(searchFilter.toLowerCase())
+						|| app.getDate().toLowerCase().contains(searchFilter.toLowerCase())
+//						|| app.getTime().toLowerCase().contains(searchFilter.toLowerCase())
+						)
+				try {
+					appTableModel.addRow(new Object[] { app.getID(), app.getDate(), app.getTime(),
+							app.getPatient(), app.getDoctor(), app.getMedicine() });
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null, e, "Error", JOptionPane.ERROR_MESSAGE);
+				}
+		}
 	}
 
 	public boolean showApp(int appId) {
@@ -364,8 +365,9 @@ public class AppointmentGUI extends JPanel {
 
 	public void cleanTextField() {
 		txt_Search.setText("");
-		textField_appId.setText("");
-		textField_date.setText("");
+		//textField_appId.setText("");
+		textField_date.setText(new SimpleDateFormat("yyyy-MM-dd")
+				.format(Calendar.getInstance().getTime()));
 		textField_time.setText("");
 		textField_patient.setText("");
 		textField_doctor.setText("");

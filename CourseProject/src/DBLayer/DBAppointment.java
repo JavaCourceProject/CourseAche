@@ -142,8 +142,8 @@ public class DBAppointment implements IFDBAppointment {
 		Appointment app = new Appointment();
 		try {
 			app.setID(results.getInt("appointmentId"));
-			//app.setDate(results.getString("date"));
-			//app.setTime(results.getString("time"));
+			app.setDate(results.getString("date"));
+			app.setTime(results.getTime("time")); 
 			app.setPatient(results.getInt("personID"));
 			app.setDoctor(results.getInt("doctorID"));
 			app.setMedicine(results.getInt("medicineID"));

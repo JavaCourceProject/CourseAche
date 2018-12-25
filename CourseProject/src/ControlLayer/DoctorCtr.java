@@ -11,7 +11,7 @@ public class DoctorCtr {
 	public DoctorCtr() {
 	}
 
-	// Inser doctor
+	// Insert doctor
 	public int insertDoctor(String name, String sname, String address, String email, String phone) {
 		int doctorId = 0;
 		Doctor doctor = new Doctor();

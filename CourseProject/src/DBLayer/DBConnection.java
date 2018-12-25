@@ -12,12 +12,14 @@ public class DBConnection {
 	private static DBConnection instance = null;
 
 	private DBConnection() {
-		//
-		String url = driver + databaseName + userName + password;
+		//Lizos
+		//String url = driver + databaseName + userName + password;
+		
+		String url = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;integratedSecurity=true;";
 		
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			System.out.println("Load af class ok");
+			System.out.println("Load af class ok. Test");
 		} catch (Exception e) {
 			System.out.println("Can not find the driver");
 			System.out.println(e.getMessage());

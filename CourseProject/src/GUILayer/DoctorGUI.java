@@ -1,6 +1,5 @@
 //GUILayer doctorGUI
 package GUILayer;
-//Ar matosi ?
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;

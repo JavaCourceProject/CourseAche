@@ -65,7 +65,7 @@ public class DBAppointment implements IFDBAppointment {
 				+ "personID = '" + appointmentObj.getPatient() + "'," 
 				+ "doctorID = '" + appointmentObj.getDoctor() + "',"
 				+ "medicineID = '" + appointmentObj.getMedicine() + "'"
-				+ " WHERE doctorId = '" + appointmentObj.getID() + "'";
+				+ " WHERE appointmentId = '" + appointmentObj.getID() + "'";
 		System.out.println("Update query:" + query);
 		try {
 			Statement stmt = con.createStatement();
@@ -142,7 +142,7 @@ public class DBAppointment implements IFDBAppointment {
 		Appointment app = new Appointment();
 		try {
 			app.setID(results.getInt("appointmentId"));
-			app.setDate(results.getString("date"));
+			app.setDate(results.getDate("date"));
 			app.setTime(results.getTime("time")); 
 			app.setPatient(results.getInt("personID"));
 			app.setDoctor(results.getInt("doctorID"));

@@ -199,7 +199,7 @@ public class AppointmentGUI extends JPanel {
 
 					try {
 						appCtr.insertApp(
-								textField_date.getText(), 
+								java.sql.Date.valueOf(textField_date.getText()), 
 								java.sql.Time.valueOf(time_format),
 								Integer.parseInt(textField_patient.getText()), 
 								Integer.parseInt(textField_doctor.getText()), 
@@ -244,20 +244,20 @@ public class AppointmentGUI extends JPanel {
 				if (textField_appId.getText().isEmpty()) {
 					JOptionPane.showMessageDialog(null, "Please select an appointment", "Error", JOptionPane.ERROR_MESSAGE);
 				} else {
-//					try {
-//						appCtr.updateAppointment(Integer.parseInt(
-//								textField_appId.getText()), 
-//								textField_date.getText(),
-//								textField_time.getText(), 
-//								textField_patient.getText(), 
-//								textField_doctor.getText(),
-//								textField_medicine.getText());
-//						JOptionPane.showMessageDialog(null, "The appointment info is saved", "Update appointment",
-//								JOptionPane.INFORMATION_MESSAGE);
-//					} catch (Exception a) {
-//						JOptionPane.showMessageDialog(null, "Please input correct values", "Error",
-//								JOptionPane.ERROR_MESSAGE);
-//					}
+					try {
+						appCtr.updateAppointment(Integer.parseInt(
+								textField_appId.getText()), 
+								java.sql.Date.valueOf(textField_date.getText()), 
+								java.sql.Time.valueOf(textField_time.getText()), 
+								Integer.parseInt(textField_patient.getText()), 
+								Integer.parseInt(textField_doctor.getText()),
+								Integer.parseInt(textField_medicine.getText()));
+						JOptionPane.showMessageDialog(null, "The appointment info is saved", "Update appointment",
+								JOptionPane.INFORMATION_MESSAGE);
+					} catch (Exception a) {
+						JOptionPane.showMessageDialog(null, "Please input correct values", "Error",
+								JOptionPane.ERROR_MESSAGE);
+					}
 
 					cleanTextField();
 					showAllApp();
@@ -320,7 +320,7 @@ public class AppointmentGUI extends JPanel {
 		// Sorting
 		for (Appointment app : apps) {
 			if (((Integer) app.getID()).toString().toLowerCase().contains(searchFilter.toLowerCase())
-						|| app.getDate().toLowerCase().contains(searchFilter.toLowerCase())
+//						|| app.getDate().toLowerCase().contains(searchFilter.toLowerCase())
 //						|| app.getTime().toLowerCase().contains(searchFilter.toLowerCase())
 						)
 				try {
@@ -366,6 +366,7 @@ public class AppointmentGUI extends JPanel {
 	public void cleanTextField() {
 		txt_Search.setText("");
 		//textField_appId.setText("");
+		textField_appId.setText("");
 		textField_date.setText(new SimpleDateFormat("yyyy-MM-dd")
 				.format(Calendar.getInstance().getTime()));
 		textField_time.setText("");

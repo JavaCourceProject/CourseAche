@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 public class Appointment {
 	private int ID;
-	private String date;
+	private Date date;
 	private Time time;
 	private int patient;
 	private int doctor;
@@ -38,11 +38,11 @@ public class Appointment {
 		ID = iD;
 	}
 
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 

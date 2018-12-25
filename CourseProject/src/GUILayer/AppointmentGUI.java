@@ -320,8 +320,8 @@ public class AppointmentGUI extends JPanel {
 		// Sorting
 		for (Appointment app : apps) {
 			if (((Integer) app.getID()).toString().toLowerCase().contains(searchFilter.toLowerCase())
-//						|| app.getDate().toLowerCase().contains(searchFilter.toLowerCase())
-//						|| app.getTime().toLowerCase().contains(searchFilter.toLowerCase())
+						|| app.getDate().toString().toLowerCase().contains(searchFilter.toLowerCase())
+						|| app.getTime().toString().toLowerCase().contains(searchFilter.toLowerCase())
 						)
 				try {
 					appTableModel.addRow(new Object[] { app.getID(), app.getDate(), app.getTime(),

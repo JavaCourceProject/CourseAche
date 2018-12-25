@@ -35,7 +35,7 @@ public class AppointmentCtr {
 		return appId;
 	}
 
-	// Get doctor
+	// Get appointment
 	public Object getAppointment(int appId) throws Exception {
 		Appointment app = new Appointment();
 		IFDBAppointment dbApp = new DBAppointment();
@@ -54,7 +54,7 @@ public class AppointmentCtr {
 		}
 	}
 
-	// Update doctor
+	// Update appointment
 	public void updateAppointment(int appId, Date date, Time time, int patient, int doctor, int medicine) {
 		Appointment app = new Appointment();
 		app.setID(appId);
@@ -73,7 +73,7 @@ public class AppointmentCtr {
 		}
 	}
 
-	// Delete doctor
+	// Delete appointment
 	public void deleteAppointment(int appId) {
 		try {
 			DBConnection.startTransaction();
@@ -85,7 +85,7 @@ public class AppointmentCtr {
 		}
 	}
 
-	// Get doctor array
+	// Get appointment array
 	public ArrayList<Appointment> getAllAppointment() {
 		ArrayList<Appointment> apps = new ArrayList<Appointment>();
 		for (Appointment app : apps) {

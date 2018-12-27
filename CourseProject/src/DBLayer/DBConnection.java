@@ -19,9 +19,9 @@ public class DBConnection {
 		
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			System.out.println("Load af class ok. Test");
+			System.out.println("Load of class ok.");
 		} catch (Exception e) {
-			System.out.println("Can not find the driver");
+			System.out.println("Cannot find the driver");
 			System.out.println(e.getMessage());
 		}
 		try {

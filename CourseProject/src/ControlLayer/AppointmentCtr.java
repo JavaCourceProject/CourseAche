@@ -101,4 +101,9 @@ public class AppointmentCtr {
 		}
 		return apps;
 	}
+	
+	//Get Patient for dropdown
+	
+	
+	
 }

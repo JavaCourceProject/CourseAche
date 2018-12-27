@@ -11,11 +11,11 @@ public class Doctor {
 
 	public Doctor() {
 	}
-
+	
 	public Doctor(int id) {
 		ID = id;
 	}
-
+	
 	public String toString() {
 		return "/nID: " + getID() + "/nName: " + getName() + " " + getsName() + "/nAddress: " + getAddress()
 				+ "/nEmail: " + getEmail() + "/nPhone: " + getPhone();

@@ -1,8 +1,11 @@
 package ModelLayer;
 
 import java.sql.Time;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
-import java.util.LinkedList;
+
+import DBLayer.DBDoctor;
 
 public class Appointment {
 	private int ID;
@@ -10,8 +13,11 @@ public class Appointment {
 	private Time time;
 	private int patient;
 	private int doctor;
+	private String doctor_name;
 	private int medicine;
-	private LinkedList<Doctor> doctors;
+	private ArrayList<Doctor> doctors = new ArrayList<Doctor>();
+	private ArrayList<DBDoctor> dbdoctor;
+	//private Doctor doctors;
 
 	public Appointment() {
 	}
@@ -78,11 +84,22 @@ public class Appointment {
 		this.medicine = medicine;
 	}
 	
-	public LinkedList<Doctor> getDoctors() {
+	public ArrayList<Doctor> getDoctors() {
+		
+//		try{System.out.println("tipo daltarskdn: " + dbdoctor.ge);
+//			for (DBDoctor p : dbdoctor ) {
+//				//System.out.println(p.getDoctor(doctors.get(2), true));
+//				
+//			}
+//			
+//		} catch (Exception e) {
+//			System.err.println("Caught IOException: " + e.getMessage());
+//		}
+		//doctor_name = this.doctors.get(2).getName();
 		return doctors;
 	}
 
-	public void setDoctors(LinkedList<Doctor> doctors) {
+	public void setDoctors(ArrayList<Doctor> doctors) {
 		this.doctors = doctors;
 	}
 }

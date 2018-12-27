@@ -18,6 +18,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.Locale;
 //import java.util.Date;
 
@@ -35,8 +36,17 @@ import javax.swing.table.DefaultTableModel;
 
 import ControlLayer.AppointmentCtr;
 import DBLayer.DBAppointment;
+import DBLayer.DBDoctor;
+import DBLayer.DBMedicine;
+import DBLayer.DBPerson;
 import DBLayer.IFDBAppointment;
+import DBLayer.IFDBDoctor;
+import DBLayer.IFDBMedicine;
+import DBLayer.IFDBPerson;
 import ModelLayer.Appointment;
+import ModelLayer.Doctor;
+import ModelLayer.Medicine;
+import ModelLayer.Person;
 
 public class AppointmentGUI extends JPanel {
 	private static final long serialVersionUID = 1L;
@@ -60,6 +70,10 @@ public class AppointmentGUI extends JPanel {
 	private JButton btnCreate;
 	private JButton btnCancel;
 	private JButton btnDelete;
+	
+	private String doc_name = "";
+	private String patient_name = "";
+	private String medicine_name = "";
 
 	public AppointmentGUI() {
 		appCtr = new AppointmentCtr();
@@ -316,6 +330,7 @@ public class AppointmentGUI extends JPanel {
 
 		IFDBAppointment dbApp = new DBAppointment();
 		ArrayList<Appointment> apps = dbApp.getAllAppointment(true);
+		
 
 		// Sorting
 		for (Appointment app : apps) {
@@ -324,8 +339,34 @@ public class AppointmentGUI extends JPanel {
 						|| app.getTime().toString().toLowerCase().contains(searchFilter.toLowerCase())
 						)
 				try {
+					IFDBDoctor dbDoctor = new DBDoctor();
+					ArrayList<Doctor> doctors = dbDoctor.getAllDoctor(true);
+
+					for (Doctor doctor : doctors) {
+						if (doctor.getID() == app.getDoctor()) doc_name = doctor.getName() + " " + doctor.getsName();
+						
+					}
+					
+					IFDBPerson dbPerson = new DBPerson();
+					ArrayList<Person> persons = dbPerson.getAllPerson(true);
+
+					for (Person person : persons) {
+						if (person.getID() == app.getPatient()) patient_name = person.getfName() + " " + person.getlName();
+					}
+					
+					IFDBMedicine dbMedicine = new DBMedicine();
+					ArrayList<Medicine> medicines = dbMedicine.getAllMedicines(true);
+
+					for (Medicine medicine : medicines) {
+						if (medicine.getID() == app.getMedicine()) medicine_name = medicine.getName();
+					}
+					
+					//Doctor doctors = new Doctor(app.getDoctor());
+					
+					
 					appTableModel.addRow(new Object[] { app.getID(), app.getDate(), app.getTime(),
-							app.getPatient(), app.getDoctor(), app.getMedicine() });
+							patient_name, doc_name, medicine_name });
+					//System.out.println("69 " + app.getDoctors().get(app.getDoctor()).getID());
 				} catch (Exception e) {
 					JOptionPane.showMessageDialog(null, e, "Error", JOptionPane.ERROR_MESSAGE);
 				}

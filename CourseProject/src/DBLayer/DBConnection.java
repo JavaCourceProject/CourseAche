@@ -3,7 +3,7 @@ package DBLayer;
 import java.sql.*;
 
 public class DBConnection {
-	private static final String driver = "jdbc:sqlserver://78.58.200.31:1433"; // 78.61.206.183:1433";
+	private static final String driver = "jdbc:sqlserver://78.61.206.183:1433";
 	private static final String databaseName = ";databaseName=Clinic";// HotelSystem";
 	private static String userName = ";user=Uknown";
 	private static String password = ";password=Admin123456789";
@@ -13,15 +13,15 @@ public class DBConnection {
 
 	private DBConnection() {
 		//Lizos
-		//String url = driver + databaseName + userName + password;
-		
-		String url = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;integratedSecurity=true;";
+		String url = driver + databaseName + userName + password;
+		//Aurimo
+		//String url = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;integratedSecurity=true;";
 		
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			System.out.println("Load af class ok. Test");
+			System.out.println("Load of class ok.");
 		} catch (Exception e) {
-			System.out.println("Can not find the driver");
+			System.out.println("Cannot find the driver");
 			System.out.println(e.getMessage());
 		}
 		try {

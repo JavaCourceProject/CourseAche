@@ -1,6 +1,8 @@
 package GUILayer;
 
 import java.awt.BorderLayout;
+import java.awt.CardLayout;
+import java.awt.Cursor;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,6 +10,8 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.sql.Time;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -25,6 +29,8 @@ import java.util.Locale;
 import javax.swing.BorderFactory;
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -65,11 +71,16 @@ public class AppointmentGUI extends JPanel {
 	private JTextField textField_patient;
 	private JTextField textField_doctor;
 	private JTextField textField_medicine;
+	private JCheckBox chkMedicine;
+	private JButton btnMedicine;
 
 	private JButton btnSave;
 	private JButton btnCreate;
 	private JButton btnCancel;
 	private JButton btnDelete;
+	
+	private JFrame frame;
+	private MedicineUI medicineUI;
 	
 	private String doc_name = "";
 	private String patient_name = "";
@@ -132,6 +143,8 @@ public class AppointmentGUI extends JPanel {
 		textField_time = new JTextField();
 		textField_patient = new JTextField();
 		textField_doctor = new JTextField();
+		chkMedicine = new JCheckBox();
+		btnMedicine = new JButton("Medicine");
 		textField_medicine = new JTextField();
 
 		GroupLayout gl = new GroupLayout(appInfoPanel);
@@ -154,7 +167,10 @@ public class AppointmentGUI extends JPanel {
 						.addComponent(textField_time)
 						.addComponent(textField_patient)
 						.addComponent(textField_doctor)
-						.addComponent(textField_medicine)));
+						.addComponent(textField_medicine)
+						.addComponent(chkMedicine)
+						.addComponent(btnMedicine)
+						));
 		gl.setVerticalGroup(gl.createSequentialGroup()
 				.addGroup(gl.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(lblappId)
 						.addComponent(textField_appId))
@@ -167,7 +183,10 @@ public class AppointmentGUI extends JPanel {
 				.addGroup(gl.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(lbldoctor)
 						.addComponent(textField_doctor))
 				.addGroup(gl.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(lblmedicine)
-						.addComponent(textField_medicine)));
+						.addComponent(textField_medicine))
+						.addComponent(chkMedicine)
+						.addComponent(btnMedicine)
+						);
 
 		showAppPanel.add(appInfoPanel, BorderLayout.NORTH);
 
@@ -190,6 +209,19 @@ public class AppointmentGUI extends JPanel {
 		addAppTable();
 		showAllApp();
 
+		// Medicine button // Liza
+		btnMedicine.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JFrame frame = new JFrame("Medicine");
+				frame.setSize(550, 320); // Login frame size
+				frame.setLocationRelativeTo(null); // Does not depend on previous form
+				frame.getContentPane().setLayout(new CardLayout(0, 0));
+			    frame.setVisible(true);
+
+				medicineUI = new MedicineUI();
+			}
+		});
+		
 		// Create button
 		btnCreate.addActionListener(new ActionListener() {		
 			public void actionPerformed(ActionEvent e) {
@@ -217,7 +249,8 @@ public class AppointmentGUI extends JPanel {
 								java.sql.Time.valueOf(time_format),
 								Integer.parseInt(textField_patient.getText()), 
 								Integer.parseInt(textField_doctor.getText()), 
-								Integer.parseInt(textField_medicine.getText()));
+								Integer.parseInt(textField_medicine.getText())
+								);
 						JOptionPane.showMessageDialog(null, "The appointment is created", "Create appointment",
 								JOptionPane.INFORMATION_MESSAGE);
 					} catch (Exception ex) {

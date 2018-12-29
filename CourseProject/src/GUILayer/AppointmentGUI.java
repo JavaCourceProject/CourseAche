@@ -96,6 +96,12 @@ public class AppointmentGUI extends JPanel {
 	
 	private IFDBPerson dbPerson = new DBPerson();
 	private ArrayList<Person> persons = dbPerson.getAllPerson(true);
+	
+	private String[][] doctors_array = new String[doctors.size()][doctors.size()];
+	private String[][] patient_array = new String[persons.size()][persons.size()];
+	private int i = 0;
+	
+	
 
 	public AppointmentGUI() {
 		appCtr = new AppointmentCtr();
@@ -219,12 +225,7 @@ public class AppointmentGUI extends JPanel {
 		choicePanel.add(btnCancel);
 		showAppPanel.add(choicePanel, BorderLayout.CENTER);
 
-		//Dropdown List for Patient and Doctor	
-		
-		String[][] doctors_array = new String[doctors.size()][doctors.size()];
-		String[][] patient_array = new String[persons.size()][persons.size()];
-		int i = 0;
-		
+		//Dropdown List for Patient and Doctor		
 		for (Doctor doctor : doctors) {			
 			textField_doctor.addItem(doctor.getName() + " " + doctor.getsName());
 			for (int j = 0; j <= 1; j++){
@@ -368,7 +369,7 @@ public class AppointmentGUI extends JPanel {
 
 	}
 
-	// Person - Doctor grid
+	// Appointment grid
 	public void addAppTable() {
 		appTableModel = new DefaultTableModel() {
 			private static final long serialVersionUID = 1L;
@@ -479,9 +480,15 @@ public class AppointmentGUI extends JPanel {
 			textField_date.setText(String.valueOf(app.getDate()));
 			textField_time.setText(String.valueOf(app.getTime()));
 			//textField_patient.setText(Integer.toString(app.getPatient()));
-			textField_patient.setSelectedItem(Integer.toString(app.getPatient()));
+			for (i = 0; i <= patient_array.length - 1; i++){
+				if (patient_array[i][0].equals(Integer.toString(app.getPatient()))) textField_patient.setSelectedIndex(i);	
+			}
 			//textField_doctor.setText(Integer.toString(app.getDoctor()));
-			textField_doctor.setSelectedItem("1");
+			for (i = 0; i <= doctors_array.length - 1; i++){
+				if (doctors_array[i][0].equals(Integer.toString(app.getDoctor()))) textField_doctor.setSelectedIndex(i);
+			}
+			
+			
 			textField_medicine.setText(Integer.toString(app.getMedicine()));
 		}
 		return success;

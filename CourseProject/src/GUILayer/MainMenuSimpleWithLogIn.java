@@ -35,7 +35,7 @@ public class MainMenuSimpleWithLogIn {
 	}
 
 	private void initialize() {
-		frame = new JFrame("Clinic System");
+		frame = new JFrame("Clinic System"); // Name of frame
 		frame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent we) {
 				close();
@@ -94,10 +94,10 @@ public class MainMenuSimpleWithLogIn {
 			}
 		});
 
-		JButton appointmentButton = new JButton("Appointment"); // Person button on form
+		JButton appointmentButton = new JButton("Appointment"); // Appointment button on form
 		buttonPanel.add(appointmentButton);
 
-		appointmentButton.addActionListener(new ActionListener() { // Person button action
+		appointmentButton.addActionListener(new ActionListener() { // Appointment button action
 			public void actionPerformed(ActionEvent e) {
 				try {
 					frame.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
@@ -113,7 +113,7 @@ public class MainMenuSimpleWithLogIn {
 		});
 		
 		JLabel lbllogIn = new JLabel("Log In Name: " + LoginUI.getLoggedInName()); // shows logged in name
-		JButton logoutButton = new JButton("Log Out");
+		JButton logoutButton = new JButton("Log Out"); // logout button
 
 		JPanel logPanel = new JPanel();
 		logPanel.setLayout(new FlowLayout());
@@ -134,6 +134,7 @@ public class MainMenuSimpleWithLogIn {
 		cl.show(frame.getContentPane(), "mainPanel");
 	}
 
+	// Exit on close
 	public void close() {
 		System.exit(1);
 	}

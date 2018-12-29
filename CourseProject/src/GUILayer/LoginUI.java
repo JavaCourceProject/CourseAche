@@ -130,14 +130,19 @@ public class LoginUI extends JPanel {
 
 	public void login() {
 		String name = loginNameField.getText();
-		try {
-			Person person = personCtr.loginGUI(name);
-			loggedInId = person.getID(); // logged in id
-			loggedInName = person.getfName() + " " + person.getlName(); // logged in name and surname
-			String text = "You are logged in";
-			JOptionPane.showMessageDialog(null, text, "Login", JOptionPane.INFORMATION_MESSAGE);
-		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, "Bad login credentials", "Error", JOptionPane.ERROR_MESSAGE);
+		// Checks if the user name or password are nor empty
+		if (name.isEmpty() || loginPasswordField.getPassword().length == 0) { 
+			JOptionPane.showMessageDialog(null, "Fields are empty", "Error", JOptionPane.ERROR_MESSAGE);
+		} else {
+			try {
+				Person person = personCtr.loginGUI(name);
+				loggedInId = person.getID(); // logged in id
+				loggedInName = person.getfName() + " " + person.getlName(); // logged in name and surname
+				String text = "You are logged in";
+				JOptionPane.showMessageDialog(null, text, "Login", JOptionPane.INFORMATION_MESSAGE);
+			} catch (Exception e) {
+				JOptionPane.showMessageDialog(null, "Bad login credentials", "Error", JOptionPane.ERROR_MESSAGE);
+			}
 		}
 	}
 

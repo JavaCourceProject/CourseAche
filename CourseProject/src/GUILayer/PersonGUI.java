@@ -20,8 +20,8 @@ public class PersonGUI extends JPanel {
 		subMenu.setTabLayoutPolicy(JTabbedPane.WRAP_TAB_LAYOUT);
 		this.add(subMenu, BorderLayout.CENTER);
 
-		JPanel PacientGUI = new PacientGUI(); // Pacient tab
-		subMenu.add("Pacient", PacientGUI);
+		JPanel PacientGUI = new PacientGUI(); // Patient tab
+		subMenu.add("Patient", PacientGUI);
 
 		JPanel DoctorGUI = new DoctorGUI(); // Doctor tab
 		subMenu.add("Doctor", DoctorGUI);

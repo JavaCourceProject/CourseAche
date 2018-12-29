@@ -59,7 +59,7 @@ public class PacientGUI extends JPanel {
 		this.setLayout(new BorderLayout());
 		showAllPersonPanel = new JPanel();
 		this.add(showAllPersonPanel, BorderLayout.CENTER);
-		showAllPersonPanel.setBorder(BorderFactory.createTitledBorder("Pacient Info"));
+		showAllPersonPanel.setBorder(BorderFactory.createTitledBorder("Patient Info"));
 		showAllPersonPanel.setLayout(new BorderLayout());
 
 		txt_Search = new JTextField();
@@ -85,11 +85,11 @@ public class PacientGUI extends JPanel {
 		JPanel showPersonPanel = new JPanel();
 		this.add(showPersonPanel, BorderLayout.EAST);
 		showPersonPanel.setLayout(new BorderLayout());
-		showPersonPanel.setBorder(BorderFactory.createTitledBorder("Pacient"));
+		showPersonPanel.setBorder(BorderFactory.createTitledBorder("Patient"));
 
-		// Person - Pacient labels
+		// Person - Patient labels
 		personInfoPanel = new JPanel();
-		JLabel lblpersonId = new JLabel("Person Id: ");
+		JLabel lblpersonId = new JLabel("Patient Id: ");
 		JLabel lblfname = new JLabel("First Name: ");
 		JLabel lbladdress = new JLabel("Address: ");
 		JLabel lblPhone = new JLabel("Phone: ");
@@ -166,7 +166,7 @@ public class PacientGUI extends JPanel {
 		btnCreate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (!textField_personId.getText().isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Please clear pacient fields before create one", "Error",
+					JOptionPane.showMessageDialog(null, "Please clear patient fields before create one", "Error",
 							JOptionPane.ERROR_MESSAGE);
 				} else {
 					try {
@@ -177,7 +177,7 @@ public class PacientGUI extends JPanel {
 								textField_phone.getText(), 
 								textField_email.getText(),
 								"124");
-						JOptionPane.showMessageDialog(null, "The pacient is created", "Create pacient",
+						JOptionPane.showMessageDialog(null, "The patient is created", "Create patient",
 								JOptionPane.INFORMATION_MESSAGE);
 
 					} catch (Exception ex) {
@@ -194,14 +194,14 @@ public class PacientGUI extends JPanel {
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_personId.getText().isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Please select a pacient", "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Please select a patient", "Error", JOptionPane.ERROR_MESSAGE);
 				} else {
-					int reply = JOptionPane.showConfirmDialog(null, "Do you want to delete this pacient ?",
-							"Delete pacient", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+					int reply = JOptionPane.showConfirmDialog(null, "Do you want to delete this patient ?",
+							"Delete patient", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
 					if (reply == JOptionPane.YES_OPTION) {
 						try {
 							personCtr.deletePerson(Integer.parseInt(textField_personId.getText()));
-							JOptionPane.showMessageDialog(null, "The pacient is deleted", "Delete pacient",
+							JOptionPane.showMessageDialog(null, "The patient is deleted", "Delete patient",
 									JOptionPane.INFORMATION_MESSAGE);
 							cleanTextField();
 
@@ -217,7 +217,7 @@ public class PacientGUI extends JPanel {
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (textField_personId.getText().isEmpty()) {
-					JOptionPane.showMessageDialog(null, "Please select a pacient", "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Please select a patient", "Error", JOptionPane.ERROR_MESSAGE);
 				} else {
 					try {
 						personCtr.updatePerson(Integer.parseInt(
@@ -228,7 +228,7 @@ public class PacientGUI extends JPanel {
 								textField_phone.getText(), 
 								textField_email.getText(), 
 								5);
-						JOptionPane.showMessageDialog(null, "The pacient info is saved", "Update pacient",
+						JOptionPane.showMessageDialog(null, "The patient info is saved", "Update patient",
 								JOptionPane.INFORMATION_MESSAGE);
 					} catch (Exception a) {
 						JOptionPane.showMessageDialog(null, "Please input correct values", "Error",

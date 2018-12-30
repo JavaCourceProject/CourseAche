@@ -30,7 +30,7 @@
   </class>  
   <interface id="4" language="java" name="DBLayer.IFDBPerson" project="CourseProject" 
     file="/CourseProject/src/DBLayer/IFDBPerson.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="569" y="630"/>    
+    <position height="-1" width="-1" x="578" y="626"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -92,39 +92,43 @@
     </display>  
   </class>  
   <dependency id="11">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <realization id="12">    
-    <end type="SOURCE" refId="2"/>    
+    <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="4"/>  
-  </realization>  
-  <dependency id="13">    
+  </dependency>  
+  <dependency id="12">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="3"/>  
   </dependency>  
+  <realization id="13">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
   <dependency id="14">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="10"/>  
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
   </dependency>  
-  <association id="15">    
+  <dependency id="15">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="16">    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="16" name="personCtr"/>      
-      <multiplicity id="17" minimum="0" maximum="1"/>    
+      <attribute id="17" name="personCtr">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="18" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="18">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
   <dependency id="19">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="7"/>  
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
   </dependency>  
   <dependency id="20">    
-    <end type="SOURCE" refId="9"/>    
+    <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="7"/>  
   </dependency>  
   <dependency id="21">    
@@ -132,59 +136,71 @@
     <end type="TARGET" refId="4"/>  
   </dependency>  
   <dependency id="22">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="6"/>  
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="7"/>  
   </dependency>  
   <association id="23">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="24" name="instance"/>      
-      <multiplicity id="25" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="24" name="loginUI">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="25" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
+    <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <dependency id="26">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="2"/>  
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="7"/>  
   </dependency>  
   <dependency id="27">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="10"/>  
   </dependency>  
-  <association id="28">    
+  <dependency id="28">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="29">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="30">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="31">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="32">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="29" name="personCtr"/>      
-      <multiplicity id="30" minimum="0" maximum="1"/>    
+      <attribute id="33" name="personCtr">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="34" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="31">    
+  <dependency id="35">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="7"/>  
   </dependency>  
-  <dependency id="32">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <dependency id="33">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="10"/>  
-  </dependency>  
-  <dependency id="34">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="5"/>  
-  </dependency>  
-  <dependency id="35">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
   <association id="36">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="37" name="loginUI"/>      
-      <multiplicity id="38" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="37" name="instance">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="38" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
+    <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

@@ -1,3 +1,6 @@
+/**
+ * @author Aurimas Blazys
+ */
 package GUILayer;
 
 import java.awt.BorderLayout;

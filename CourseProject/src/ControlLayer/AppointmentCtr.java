@@ -1,3 +1,6 @@
+/**
+ * @author Aurimas Blazys
+ */
 package ControlLayer;
 
 import java.sql.Time;

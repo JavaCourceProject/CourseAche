@@ -1,3 +1,6 @@
+/**
+ * @author Jelizaveta Kuznecova
+ */
 package ControlLayer;
 
 import java.util.ArrayList;

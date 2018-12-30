@@ -1,4 +1,6 @@
-//GUILayer doctorGUI
+/**
+ * @author Jelizaveta Kuznecova
+ */
 package GUILayer;
 
 import java.awt.BorderLayout;

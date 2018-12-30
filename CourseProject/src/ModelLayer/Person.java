@@ -1,3 +1,6 @@
+/**
+ * @author Jelizaveta Kuznecova
+ */
 package ModelLayer;
 
 public class Person {

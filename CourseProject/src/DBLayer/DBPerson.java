@@ -1,3 +1,6 @@
+/**
+ * @author Jelizaveta Kuznecova
+ */
 package DBLayer;
 
 import java.sql.Connection;

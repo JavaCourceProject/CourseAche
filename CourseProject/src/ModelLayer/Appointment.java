@@ -1,3 +1,6 @@
+/**
+ * @author Aurimas Blazys
+ */
 package ModelLayer;
 
 import java.sql.Time;

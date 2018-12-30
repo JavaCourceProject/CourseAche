@@ -1,3 +1,6 @@
+/**
+ * @author Aurimas Blazys
+ */
 package DBLayer;
 
 import java.util.ArrayList;

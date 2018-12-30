@@ -1,3 +1,6 @@
+/**
+ * @author Jelizaveta Kuznecova
+ */
 package GUILayer;
 
 import java.awt.Component;

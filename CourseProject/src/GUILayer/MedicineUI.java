@@ -48,13 +48,12 @@ public class MedicineUI extends JPanel {
 		//Medicine Label
 		appInfoPanel = new JPanel();
 		JLabel lblmedicinename = new JLabel("Medicine Name: ");
-		JLabel lblmedicineqty = new JLabel("Medicine QTY: ");
+		JLabel lblmedicineqty = new JLabel("Medicine Quantity: ");
 		JLabel lblmedicineusage = new JLabel("Medicine Usage: ");
 		JLabel lblmedicinesupplier = new JLabel("Medicine Supplier: ");
 		
 		GroupLayout gl = new GroupLayout(appInfoPanel);
 		appInfoPanel.setLayout(gl);
-		appInfoPanel.setBorder(BorderFactory.createTitledBorder("Info"));
 		gl.setAutoCreateGaps(true);
 		gl.setAutoCreateContainerGaps(true);
 

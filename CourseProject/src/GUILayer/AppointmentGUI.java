@@ -12,9 +12,12 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 
 import javax.swing.BorderFactory;
 import javax.swing.GroupLayout;
@@ -88,6 +91,9 @@ public class AppointmentGUI extends JPanel {
 	private String[][] doctors_array = new String[doctors.size()][doctors.size()];
 	private String[][] patient_array = new String[persons.size()][persons.size()];
 	private int i = 0;
+	
+	private LocalDate todayLocalDate  = LocalDate.now();
+	private Date date = java.sql.Date.valueOf(todayLocalDate.toString());
 	
 	
 
@@ -276,17 +282,26 @@ public class AppointmentGUI extends JPanel {
 					
 					try {
 						
-						appCtr.insertApp(
-								java.sql.Date.valueOf(textField_date.getText()), 
-								java.sql.Time.valueOf(time_format),
-								//Integer.parseInt(textField_patient.getText()), 
-								Integer.parseInt(patient_array[textField_patient.getSelectedIndex()][0]),
-								//Integer.parseInt(textField_doctor.getText()), 
-								Integer.parseInt(doctors_array[textField_doctor.getSelectedIndex()][0]),
-								Integer.parseInt(textField_medicine.getText())
-								);
-						JOptionPane.showMessageDialog(null, "The appointment is created", "Create appointment",
-								JOptionPane.INFORMATION_MESSAGE);
+						if (java.sql.Date.valueOf(textField_date.getText()) != null &&
+								date.after(java.sql.Date.valueOf(textField_date.getText())) ){
+							
+							System.out.println(date);
+							System.out.println(java.sql.Date.valueOf(textField_date.getText()) );
+							JOptionPane.showMessageDialog(null, "Please input correct date", "Error",
+									JOptionPane.ERROR_MESSAGE);	
+						}else {
+							appCtr.insertApp(
+									java.sql.Date.valueOf(textField_date.getText()), 
+									java.sql.Time.valueOf(time_format),
+									//Integer.parseInt(textField_patient.getText()), 
+									Integer.parseInt(patient_array[textField_patient.getSelectedIndex()][0]),
+									//Integer.parseInt(textField_doctor.getText()), 
+									Integer.parseInt(doctors_array[textField_doctor.getSelectedIndex()][0]),
+									Integer.parseInt(textField_medicine.getText())
+									);
+							JOptionPane.showMessageDialog(null, "The appointment is created", "Create appointment",
+									JOptionPane.INFORMATION_MESSAGE);
+						}
 					} catch (Exception ex) {
 						JOptionPane.showMessageDialog(null, "Please input correct values", "Error",
 								JOptionPane.ERROR_MESSAGE);
@@ -326,17 +341,27 @@ public class AppointmentGUI extends JPanel {
 					JOptionPane.showMessageDialog(null, "Please select an appointment", "Error", JOptionPane.ERROR_MESSAGE);
 				} else {
 					try {
-						appCtr.updateAppointment(Integer.parseInt(
-								textField_appId.getText()), 
-								java.sql.Date.valueOf(textField_date.getText()), 
-								java.sql.Time.valueOf(textField_time.getText()),
-								//Integer.parseInt(textField_patient.getText()), 
-								Integer.parseInt(patient_array[textField_patient.getSelectedIndex()][0]),
-								//Integer.parseInt(textField_doctor.getText()),
-								Integer.parseInt(doctors_array[textField_doctor.getSelectedIndex()][0]),
-								Integer.parseInt(textField_medicine.getText()));
-						JOptionPane.showMessageDialog(null, "The appointment info is saved", "Update appointment",
-								JOptionPane.INFORMATION_MESSAGE);
+						
+						if (java.sql.Date.valueOf(textField_date.getText()) != null &&
+								date.after(java.sql.Date.valueOf(textField_date.getText())) ){
+							
+							System.out.println(date);
+							System.out.println(java.sql.Date.valueOf(textField_date.getText()) );
+							JOptionPane.showMessageDialog(null, "Please input correct date", "Error",
+									JOptionPane.ERROR_MESSAGE);							
+						}else {
+							appCtr.updateAppointment(Integer.parseInt(
+									textField_appId.getText()), 
+									java.sql.Date.valueOf(textField_date.getText()), 
+									java.sql.Time.valueOf(textField_time.getText()),
+									//Integer.parseInt(textField_patient.getText()), 
+									Integer.parseInt(patient_array[textField_patient.getSelectedIndex()][0]),
+									//Integer.parseInt(textField_doctor.getText()),
+									Integer.parseInt(doctors_array[textField_doctor.getSelectedIndex()][0]),
+									Integer.parseInt(textField_medicine.getText()));
+							JOptionPane.showMessageDialog(null, "The appointment info is saved", "Update appointment",
+									JOptionPane.INFORMATION_MESSAGE);
+						}
 					} catch (Exception a) {
 						JOptionPane.showMessageDialog(null, "Please input correct values", "Error",
 								JOptionPane.ERROR_MESSAGE);

@@ -21,6 +21,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import javax.swing.BorderFactory;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -101,7 +102,7 @@ public class AppointmentGUI extends JPanel {
 	private LocalDate todayLocalDate  = LocalDate.now();
 	private Date date = java.sql.Date.valueOf(todayLocalDate.toString());
 	
-	
+	private static final String NOT_SELECTABLE_OPTION = " - Select an Option - ";
 
 	public AppointmentGUI() {
 		appCtr = new AppointmentCtr();
@@ -226,7 +227,26 @@ public class AppointmentGUI extends JPanel {
 		choicePanel.add(btnCancel);
 		showAppPanel.add(choicePanel, BorderLayout.CENTER);
 
-		//Dropdown List for Patient, Doctor	and Medicine	
+		//Dropdown List for Patient, Doctor	and Medicine
+		
+		textField_doctor.setModel(new DefaultComboBoxModel(){
+			  private static final long serialVersionUID = 1L;
+			  boolean selectionAllowed = true;
+
+			  @Override
+			  public void setSelectedItem(Object anObject) {
+			    if (!NOT_SELECTABLE_OPTION.equals(anObject)) {
+			      super.setSelectedItem(anObject);
+			    } else if (selectionAllowed) {
+			      // Allow this just once
+			      selectionAllowed = false;
+			      super.setSelectedItem(anObject);
+			    }
+			  }
+		});
+		
+		textField_doctor.addItem(NOT_SELECTABLE_OPTION);
+		
 		for (Doctor doctor : doctors) {			
 			textField_doctor.addItem(doctor.getName() + " " + doctor.getsName());
 			for (int j = 0; j <= 1; j++){
@@ -240,6 +260,24 @@ public class AppointmentGUI extends JPanel {
 
 		i = 0;
 		
+		textField_patient.setModel(new DefaultComboBoxModel(){
+			  private static final long serialVersionUID = 1L;
+			  boolean selectionAllowed = true;
+
+			  @Override
+			  public void setSelectedItem(Object anObject) {
+			    if (!NOT_SELECTABLE_OPTION.equals(anObject)) {
+			      super.setSelectedItem(anObject);
+			    } else if (selectionAllowed) {
+			      // Allow this just once
+			      selectionAllowed = false;
+			      super.setSelectedItem(anObject);
+			    }
+			  }
+		});
+		
+		textField_patient.addItem(NOT_SELECTABLE_OPTION);
+		
 		for (Person person : persons) {
 			textField_patient.addItem(person.getfName() + " " + person.getlName());
 			for (int j = 0; j <= 1; j++){
@@ -251,6 +289,24 @@ public class AppointmentGUI extends JPanel {
 		}
 		
 		i = 0;
+		
+		textField_medicine.setModel(new DefaultComboBoxModel(){
+			  private static final long serialVersionUID = 1;
+			  boolean selectionAllowed = true;
+
+			  @Override
+			  public void setSelectedItem(Object anObject) {
+			    if (!NOT_SELECTABLE_OPTION.equals(anObject)) {
+			      super.setSelectedItem(anObject);
+			    } else if (selectionAllowed) {
+			      // Allow this just once
+			      selectionAllowed = false;
+			      super.setSelectedItem(anObject);
+			    }
+			  }
+		});
+		
+		textField_medicine.addItem(NOT_SELECTABLE_OPTION);
 		
 		for (Medicine medicine : medicines) {
 			textField_medicine.addItem(medicine.getName() + " QTY " + medicine.getQty() + " Usage " + medicine.getUsage());
@@ -375,11 +431,11 @@ public class AppointmentGUI extends JPanel {
 									java.sql.Date.valueOf(textField_date.getText()), 
 									java.sql.Time.valueOf(textField_time.getText()),
 									//Integer.parseInt(textField_patient.getText()), 
-									Integer.parseInt(patient_array[textField_patient.getSelectedIndex()][0]),
+									Integer.parseInt(patient_array[textField_patient.getSelectedIndex()-1][0]),
 									//Integer.parseInt(textField_doctor.getText()),
-									Integer.parseInt(doctors_array[textField_doctor.getSelectedIndex()][0]),
+									Integer.parseInt(doctors_array[textField_doctor.getSelectedIndex()-1][0]),
 //									Integer.parseInt(textField_medicine.getText())
-									Integer.parseInt(medicine_array[textField_medicine.getSelectedIndex()][0]));
+									Integer.parseInt(medicine_array[textField_medicine.getSelectedIndex()-1][0]));
 							JOptionPane.showMessageDialog(null, "The appointment info is saved", "Update appointment",
 									JOptionPane.INFORMATION_MESSAGE);
 						}
@@ -515,16 +571,18 @@ public class AppointmentGUI extends JPanel {
 			textField_time.setText(String.valueOf(app.getTime()));
 			//textField_patient.setText(Integer.toString(app.getPatient()));
 			for (i = 0; i <= patient_array.length - 1; i++){
-				if (patient_array[i][0].equals(Integer.toString(app.getPatient()))) textField_patient.setSelectedIndex(i);	
+				if (patient_array[i][0].equals(Integer.toString(app.getPatient()))) textField_patient.setSelectedIndex(i+1);	
 			}
 			//textField_doctor.setText(Integer.toString(app.getDoctor()));
 			for (i = 0; i <= doctors_array.length - 1; i++){
-				if (doctors_array[i][0].equals(Integer.toString(app.getDoctor()))) textField_doctor.setSelectedIndex(i);
+				if (doctors_array[i][0].equals(Integer.toString(app.getDoctor()))) textField_doctor.setSelectedIndex(i+1);
 			}
 			
 			//textField_medicine.setText(Integer.toString(app.getMedicine()));
 			for (i = 0; i <= medicine_array.length - 1; i++){
-				if (medicine_array[i][0].equals(Integer.toString(app.getMedicine()))) textField_medicine.setSelectedIndex(i);
+				if (medicine_array[i][0].equals(Integer.toString(app.getMedicine()))) textField_medicine.setSelectedIndex(i+1);
+				else textField_medicine.setSelectedIndex(1);
+				
 			}
 			
 		}

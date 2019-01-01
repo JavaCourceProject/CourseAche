@@ -16,6 +16,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -66,7 +67,8 @@ public class AppointmentGUI extends JPanel {
 	private JComboBox textField_patient;
 	//private JTextField textField_doctor;
 	private JComboBox textField_doctor;
-	private JTextField textField_medicine;
+	//private JTextField textField_medicine;
+	private JComboBox textField_medicine;
 //	private JCheckBox chkMedicine;
 	private JButton btnMedicine;
 
@@ -88,8 +90,12 @@ public class AppointmentGUI extends JPanel {
 	private IFDBPerson dbPerson = new DBPerson();
 	private ArrayList<Person> persons = dbPerson.getAllPerson(true);
 	
-	private String[][] doctors_array = new String[doctors.size()][doctors.size()];
-	private String[][] patient_array = new String[persons.size()][persons.size()];
+	private IFDBMedicine dbmedicine = new DBMedicine();
+	private ArrayList<Medicine> medicines = dbmedicine.getAllMedicines(true);
+	
+	private String[][] doctors_array = new String[doctors.size()][2];
+	private String[][] patient_array = new String[persons.size()][2];
+	private String[][] medicine_array = new String[medicines.size()][2];
 	private int i = 0;
 	
 	private LocalDate todayLocalDate  = LocalDate.now();
@@ -158,7 +164,8 @@ public class AppointmentGUI extends JPanel {
 		textField_doctor = new JComboBox();
 		//chkMedicine = new JCheckBox();
 		btnMedicine = new JButton("Medicine");
-		textField_medicine = new JTextField();
+//		textField_medicine = new JTextField();
+		textField_medicine = new JComboBox();
 
 		GroupLayout gl = new GroupLayout(appInfoPanel);
 		appInfoPanel.setLayout(gl);
@@ -219,7 +226,7 @@ public class AppointmentGUI extends JPanel {
 		choicePanel.add(btnCancel);
 		showAppPanel.add(choicePanel, BorderLayout.CENTER);
 
-		//Dropdown List for Patient and Doctor		
+		//Dropdown List for Patient, Doctor	and Medicine	
 		for (Doctor doctor : doctors) {			
 			textField_doctor.addItem(doctor.getName() + " " + doctor.getsName());
 			for (int j = 0; j <= 1; j++){
@@ -243,7 +250,19 @@ public class AppointmentGUI extends JPanel {
 			i++;
 		}
 		
+		i = 0;
 		
+		for (Medicine medicine : medicines) {
+			textField_medicine.addItem(medicine.getName() + " QTY " + medicine.getQty() + " Usage " + medicine.getUsage());
+			
+			for (int j = 0; j <= 1; j++){
+				if ( j == 0 ) medicine_array[i][j] = ((Integer) medicine.getID()).toString();
+				else medicine_array[i][j] = medicine.getName() + " QTY " + medicine.getQty() + " Usage " + medicine.getUsage();				
+				
+			}
+		
+			i++;
+		}		
 		
 		addAppTable();
 		showAllApp();
@@ -297,7 +316,8 @@ public class AppointmentGUI extends JPanel {
 									Integer.parseInt(patient_array[textField_patient.getSelectedIndex()][0]),
 									//Integer.parseInt(textField_doctor.getText()), 
 									Integer.parseInt(doctors_array[textField_doctor.getSelectedIndex()][0]),
-									Integer.parseInt(textField_medicine.getText())
+//									Integer.parseInt(textField_medicine.getText())
+									Integer.parseInt(medicine_array[textField_medicine.getSelectedIndex()][0])
 									);
 							JOptionPane.showMessageDialog(null, "The appointment is created", "Create appointment",
 									JOptionPane.INFORMATION_MESSAGE);
@@ -358,7 +378,8 @@ public class AppointmentGUI extends JPanel {
 									Integer.parseInt(patient_array[textField_patient.getSelectedIndex()][0]),
 									//Integer.parseInt(textField_doctor.getText()),
 									Integer.parseInt(doctors_array[textField_doctor.getSelectedIndex()][0]),
-									Integer.parseInt(textField_medicine.getText()));
+//									Integer.parseInt(textField_medicine.getText())
+									Integer.parseInt(medicine_array[textField_medicine.getSelectedIndex()][0]));
 							JOptionPane.showMessageDialog(null, "The appointment info is saved", "Update appointment",
 									JOptionPane.INFORMATION_MESSAGE);
 						}
@@ -501,8 +522,11 @@ public class AppointmentGUI extends JPanel {
 				if (doctors_array[i][0].equals(Integer.toString(app.getDoctor()))) textField_doctor.setSelectedIndex(i);
 			}
 			
+			//textField_medicine.setText(Integer.toString(app.getMedicine()));
+			for (i = 0; i <= medicine_array.length - 1; i++){
+				if (medicine_array[i][0].equals(Integer.toString(app.getMedicine()))) textField_medicine.setSelectedIndex(i);
+			}
 			
-			textField_medicine.setText(Integer.toString(app.getMedicine()));
 		}
 		return success;
 	}
@@ -518,6 +542,7 @@ public class AppointmentGUI extends JPanel {
 		textField_patient.setSelectedItem(null);
 		//textField_doctor.setText("");
 		textField_doctor.setSelectedItem(null);
-		textField_medicine.setText("");
+		//textField_medicine.setText("");
+		textField_medicine.setSelectedItem(null);
 	}
 }

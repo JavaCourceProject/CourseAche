@@ -67,7 +67,7 @@ public class AppointmentGUI extends JPanel {
 	//private JTextField textField_doctor;
 	private JComboBox textField_doctor;
 	private JTextField textField_medicine;
-	private JCheckBox chkMedicine;
+//	private JCheckBox chkMedicine;
 	private JButton btnMedicine;
 
 	private JButton btnSave;
@@ -156,7 +156,7 @@ public class AppointmentGUI extends JPanel {
 		textField_patient = new JComboBox();
 		//textField_doctor = new JTextField();
 		textField_doctor = new JComboBox();
-		chkMedicine = new JCheckBox();
+		//chkMedicine = new JCheckBox();
 		btnMedicine = new JButton("Medicine");
 		textField_medicine = new JTextField();
 
@@ -181,7 +181,7 @@ public class AppointmentGUI extends JPanel {
 						.addComponent(textField_patient)
 						.addComponent(textField_doctor)
 						.addComponent(textField_medicine)
-						.addComponent(chkMedicine)
+						//.addComponent(chkMedicine)
 						.addComponent(btnMedicine)
 						));
 		gl.setVerticalGroup(gl.createSequentialGroup()
@@ -197,7 +197,7 @@ public class AppointmentGUI extends JPanel {
 						.addComponent(textField_doctor))
 				.addGroup(gl.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(lblmedicine)
 						.addComponent(textField_medicine))
-						.addComponent(chkMedicine)
+						//.addComponent(chkMedicine)
 						.addComponent(btnMedicine)
 						);
 
@@ -399,7 +399,7 @@ public class AppointmentGUI extends JPanel {
 		appTableModel.addColumn("Time");
 		appTableModel.addColumn("Patient");
 		appTableModel.addColumn("Doctor");
-		appTableModel.addColumn("Medicine");
+//		appTableModel.addColumn("Medicine");
 
 		appTableScrollPane = new JScrollPane();
 
@@ -448,18 +448,18 @@ public class AppointmentGUI extends JPanel {
 						if (person.getID() == app.getPatient()) patient_name = person.getfName() + " " + person.getlName();
 					}
 					
-					IFDBMedicine dbMedicine = new DBMedicine();
-					ArrayList<Medicine> medicines = dbMedicine.getAllMedicines(true);
-
-					for (Medicine medicine : medicines) {
-						if (medicine.getID() == app.getMedicine()) medicine_name = medicine.getName();
-					}
+//					IFDBMedicine dbMedicine = new DBMedicine();
+//					ArrayList<Medicine> medicines = dbMedicine.getAllMedicines(true);
+//
+//					for (Medicine medicine : medicines) {
+//						if (medicine.getID() == app.getMedicine()) medicine_name = medicine.getName();
+//					}
 					
 					//Doctor doctors = new Doctor(app.getDoctor());
 					
 					
 					appTableModel.addRow(new Object[] { app.getID(), app.getDate(), app.getTime(),
-							patient_name, doc_name, medicine_name });
+							patient_name, doc_name });
 					//System.out.println("69 " + app.getDoctors().get(app.getDoctor()).getID());
 				} catch (Exception e) {
 					JOptionPane.showMessageDialog(null, e, "Error", JOptionPane.ERROR_MESSAGE);

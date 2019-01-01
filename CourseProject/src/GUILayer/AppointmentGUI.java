@@ -142,7 +142,7 @@ public class AppointmentGUI extends JPanel {
 		showAppPanel.setLayout(new BorderLayout());
 		showAppPanel.setBorder(BorderFactory.createTitledBorder("Appointment"));
 
-		// Person - Doctor labels
+		// Appointment labels
 		appInfoPanel = new JPanel();
 		JLabel lblappId = new JLabel("Appointment Id: ");
 		JLabel lbldate = new JLabel("Date: ");
@@ -151,7 +151,7 @@ public class AppointmentGUI extends JPanel {
 		JLabel lbldoctor = new JLabel("Doctor: ");
 		JLabel lblmedicine = new JLabel("Medicine: ");
 
-		// Person - Doctor fields
+		// Appointment fields
 		textField_appId = new JTextField();
 		textField_appId.setEditable(false); // doctorId not editable
 		
@@ -314,7 +314,6 @@ public class AppointmentGUI extends JPanel {
 			for (int j = 0; j <= 1; j++){
 				if ( j == 0 ) medicine_array[i][j] = ((Integer) medicine.getID()).toString();
 				else medicine_array[i][j] = medicine.getName() + " QTY " + medicine.getQty() + " Usage " + medicine.getUsage();				
-				
 			}
 		
 			i++;
@@ -332,7 +331,7 @@ public class AppointmentGUI extends JPanel {
 				frame.getContentPane().setLayout(new CardLayout(0, 0));
 			    frame.setVisible(true);
 
-				medicineUI = new MedicineUI();
+				medicineUI = new MedicineUI(Integer.parseInt(medicine_array[textField_medicine.getSelectedIndex()-1][0]));
 			}
 		});
 		
@@ -369,11 +368,11 @@ public class AppointmentGUI extends JPanel {
 									java.sql.Date.valueOf(textField_date.getText()), 
 									java.sql.Time.valueOf(time_format),
 									//Integer.parseInt(textField_patient.getText()), 
-									Integer.parseInt(patient_array[textField_patient.getSelectedIndex()][0]),
+									Integer.parseInt(patient_array[textField_patient.getSelectedIndex()-1][0]),
 									//Integer.parseInt(textField_doctor.getText()), 
-									Integer.parseInt(doctors_array[textField_doctor.getSelectedIndex()][0]),
+									Integer.parseInt(doctors_array[textField_doctor.getSelectedIndex()-1][0]),
 //									Integer.parseInt(textField_medicine.getText())
-									Integer.parseInt(medicine_array[textField_medicine.getSelectedIndex()][0])
+									Integer.parseInt(medicine_array[textField_medicine.getSelectedIndex()-1][0])
 									);
 							JOptionPane.showMessageDialog(null, "The appointment is created", "Create appointment",
 									JOptionPane.INFORMATION_MESSAGE);

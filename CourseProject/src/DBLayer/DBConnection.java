@@ -15,10 +15,8 @@ public class DBConnection {
 	private static DBConnection instance = null;
 
 	private DBConnection() {
-		//Lizos
-		String url = driver + databaseName + userName + password;
-		//Aurimo
-		//String url = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;integratedSecurity=true;";
+		
+		String url = driver + databaseName + userName + password;		
 		
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

@@ -332,6 +332,8 @@ public class AppointmentGUI extends JPanel {
 			    frame.setVisible(true);
 
 				medicineUI = new MedicineUI(Integer.parseInt(medicine_array[textField_medicine.getSelectedIndex()-1][0]));
+			
+				frame.getContentPane().add(medicineUI, "medicineUI");
 			}
 		});
 		

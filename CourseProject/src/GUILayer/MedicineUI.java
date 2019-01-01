@@ -3,19 +3,13 @@
  */
 package GUILayer;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.util.ArrayList;
+import java.awt.*;
+import java.util.*;
 
 import DBLayer.DBMedicine;
 import DBLayer.IFDBMedicine;
 import ModelLayer.Medicine;
 import javax.swing.*;
-
-import ControlLayer.PersonCtr;
 
 public class MedicineUI extends JPanel {
 	
@@ -39,6 +33,11 @@ public class MedicineUI extends JPanel {
 		textField_medicine_qty = new JTextField("", 20);
 		textField_medicine_usage = new JTextField("", 20);
 		textField_medicine_supplier = new JTextField("", 20);
+		
+		textField_medicine_name.setEditable(false);
+		textField_medicine_qty.setEditable(false);
+		textField_medicine_usage.setEditable(false);
+		textField_medicine_supplier.setEditable(false);
 		
 		// show medicine info view
 		JPanel showAppPanel = new JPanel();

@@ -325,15 +325,20 @@ public class AppointmentGUI extends JPanel {
 		// Medicine button // Liza
 		btnMedicine.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame = new JFrame("Medicine");
-				frame.setSize(550, 320); // Login frame size
-				frame.setLocationRelativeTo(null); // Does not depend on previous form
-				frame.getContentPane().setLayout(new CardLayout(0, 0));
-			    frame.setVisible(true);
-
-				medicineUI = new MedicineUI(Integer.parseInt(medicine_array[textField_medicine.getSelectedIndex()-1][0]));
-			
-				frame.getContentPane().add(medicineUI, "medicineUI");
+				if (textField_appId.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "Please choose the appointment before viewing the medicine", "Error",
+							JOptionPane.ERROR_MESSAGE);
+				} else {
+					JFrame frame = new JFrame("Medicine");
+					frame.setSize(550, 320); // Login frame size
+					frame.setLocationRelativeTo(null); // Does not depend on previous form
+					frame.getContentPane().setLayout(new CardLayout(0, 0));
+				    frame.setVisible(true);
+	
+					medicineUI = new MedicineUI(Integer.parseInt(medicine_array[textField_medicine.getSelectedIndex()-1][0]));
+				
+					frame.getContentPane().add(medicineUI, "medicineUI");
+				}
 			}
 		});
 		

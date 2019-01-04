@@ -3,22 +3,29 @@
  */
 package GUILayer;
 
-import java.awt.*;
-import java.util.*;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.util.ArrayList;
+
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
+import javax.swing.GroupLayout;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 import DBLayer.DBMedicine;
 import DBLayer.IFDBMedicine;
 import ModelLayer.Medicine;
-import javax.swing.*;
+//import javax.swing.*;
 
 public class MedicineUI extends JPanel {
-	
-
+	private static final long serialVersionUID = 1L;
 	private JTextField textField_medicine_name;
 	private JTextField textField_medicine_qty;
 	private JTextField textField_medicine_usage;
 	private JTextField textField_medicine_supplier;
-	private JPanel appInfoPanel;
+	private JPanel medInfoPanel;
 	private JPanel choicePanel;
 	
 	public MedicineUI(int medicine_ID){
@@ -46,14 +53,14 @@ public class MedicineUI extends JPanel {
 		showAppPanel.setBorder(BorderFactory.createTitledBorder("Medicine"));
 		
 		//Medicine Label
-		appInfoPanel = new JPanel();
+		medInfoPanel = new JPanel();
 		JLabel lblmedicinename = new JLabel("Medicine Name: ");
 		JLabel lblmedicineqty = new JLabel("Medicine Quantity: ");
 		JLabel lblmedicineusage = new JLabel("Medicine Usage: ");
 		JLabel lblmedicinesupplier = new JLabel("Medicine Supplier: ");
 		
-		GroupLayout gl = new GroupLayout(appInfoPanel);
-		appInfoPanel.setLayout(gl);
+		GroupLayout gl = new GroupLayout(medInfoPanel);
+		medInfoPanel.setLayout(gl);
 		gl.setAutoCreateGaps(true);
 		gl.setAutoCreateContainerGaps(true);
 
@@ -80,7 +87,7 @@ public class MedicineUI extends JPanel {
 						.addComponent(textField_medicine_supplier))
 						);
 
-		showAppPanel.add(appInfoPanel, BorderLayout.NORTH);
+		showAppPanel.add(medInfoPanel, BorderLayout.NORTH);
 
 		choicePanel = new JPanel();
 		choicePanel.setLayout(new FlowLayout());

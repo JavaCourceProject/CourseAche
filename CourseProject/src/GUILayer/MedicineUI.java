@@ -17,7 +17,6 @@ import javax.swing.JTextField;
 import DBLayer.DBMedicine;
 import DBLayer.IFDBMedicine;
 import ModelLayer.Medicine;
-//import javax.swing.*;
 
 public class MedicineUI extends JPanel {
 	private static final long serialVersionUID = 1L;

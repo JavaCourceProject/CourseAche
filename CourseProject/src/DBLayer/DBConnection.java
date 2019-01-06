@@ -7,7 +7,7 @@ import java.sql.*;
 
 public class DBConnection {
 	private static final String driver = "jdbc:sqlserver://78.61.206.183:1433";
-	private static final String databaseName = ";databaseName=Clinic";// HotelSystem";
+	private static final String databaseName = ";databaseName=Clinic";
 	private static String userName = ";user=Uknown";
 	private static String password = ";password=Admin123456789";
 	private DatabaseMetaData dma;

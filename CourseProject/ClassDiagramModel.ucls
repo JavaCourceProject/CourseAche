@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+<class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="false" 
+  realizations="false" associations="false" dependencies="false" nesting-relationships="false" router="FAN">  
   <class id="1" language="java" name="ControlLayer.AppointmentCtr" project="CourseProject" 
     file="/CourseProject/src/ControlLayer/AppointmentCtr.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="196" width="357" x="-26" y="-24"/>    
+    <position height="-1" width="-1" x="1534" y="364"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="ControlLayer.DoctorCtr" project="CourseProject" 
     file="/CourseProject/src/ControlLayer/DoctorCtr.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1022" y="106"/>    
+    <position height="-1" width="-1" x="2056" y="1078"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="ControlLayer.MedicineCtr" project="CourseProject" 
     file="/CourseProject/src/ControlLayer/MedicineCtr.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2020" y="282"/>    
+    <position height="-1" width="-1" x="902" y="1782"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="ControlLayer.PersonCtr" project="CourseProject" 
     file="/CourseProject/src/ControlLayer/PersonCtr.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="216" width="428" x="-79" y="213"/>    
+    <position height="-1" width="-1" x="427" y="33"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="DBLayer.DBAppointment" project="CourseProject" 
     file="/CourseProject/src/DBLayer/DBAppointment.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="598" y="128"/>    
+    <position height="-1" width="-1" x="1218" y="80"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </class>  
   <class id="6" language="java" name="DBLayer.DBConnection" project="CourseProject" 
     file="/CourseProject/src/DBLayer/DBConnection.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1461" y="296"/>    
+    <position height="-1" width="-1" x="859" y="762"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <class id="7" language="java" name="DBLayer.DBDoctor" project="CourseProject" 
     file="/CourseProject/src/DBLayer/DBDoctor.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="82" y="696"/>    
+    <position height="-1" width="-1" x="1700" y="728"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </class>  
   <class id="8" language="java" name="DBLayer.DBMedicine" project="CourseProject" 
     file="/CourseProject/src/DBLayer/DBMedicine.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="904" y="446"/>    
+    <position height="-1" width="-1" x="484" y="1378"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   </class>  
   <class id="9" language="java" name="DBLayer.DBPerson" project="CourseProject" 
     file="/CourseProject/src/DBLayer/DBPerson.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1699" y="715"/>    
+    <position height="-1" width="-1" x="417" y="731"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,7 +84,7 @@
   </class>  
   <class id="10" language="java" name="DBLayer.GetMaxId" project="CourseProject" 
     file="/CourseProject/src/DBLayer/GetMaxId.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1115" y="517"/>    
+    <position height="-1" width="-1" x="1125" y="453"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -93,7 +93,7 @@
   </class>  
   <interface id="11" language="java" name="DBLayer.IFDBAppointment" project="CourseProject" 
     file="/CourseProject/src/DBLayer/IFDBAppointment.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="675" y="731"/>    
+    <position height="-1" width="-1" x="1653" y="-3"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -102,7 +102,7 @@
   </interface>  
   <interface id="12" language="java" name="DBLayer.IFDBDoctor" project="CourseProject" 
     file="/CourseProject/src/DBLayer/IFDBDoctor.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1195" y="818"/>    
+    <position height="-1" width="-1" x="1591" y="1010"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -111,7 +111,7 @@
   </interface>  
   <interface id="13" language="java" name="DBLayer.IFDBMedicine" project="CourseProject" 
     file="/CourseProject/src/DBLayer/IFDBMedicine.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="658" y="1338"/>    
+    <position height="-1" width="-1" x="478" y="1654"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -120,7 +120,7 @@
   </interface>  
   <interface id="14" language="java" name="DBLayer.IFDBPerson" project="CourseProject" 
     file="/CourseProject/src/DBLayer/IFDBPerson.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="538" y="1034"/>    
+    <position height="-1" width="-1" x="480" y="356"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -129,7 +129,7 @@
   </interface>  
   <class id="15" language="java" name="GUILayer.AppointmentGUI" project="CourseProject" 
     file="/CourseProject/src/GUILayer/AppointmentGUI.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="229" y="1579"/>    
+    <position height="-1" width="-1" x="1201" y="949"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -138,7 +138,7 @@
   </class>  
   <class id="16" language="java" name="GUILayer.DoctorGUI" project="CourseProject" 
     file="/CourseProject/src/GUILayer/DoctorGUI.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2260" y="1397"/>    
+    <position height="-1" width="-1" x="1594" y="1461"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -147,7 +147,7 @@
   </class>  
   <class id="17" language="java" name="GUILayer.LoginUI" project="CourseProject" 
     file="/CourseProject/src/GUILayer/LoginUI.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1152" y="1419"/>    
+    <position height="-1" width="-1" x="46" y="851"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -156,7 +156,7 @@
   </class>  
   <class id="18" language="java" name="GUILayer.MainMenuSimpleWithLogIn" project="CourseProject" 
     file="/CourseProject/src/GUILayer/MainMenuSimpleWithLogIn.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1276" y="1960"/>    
+    <position height="-1" width="-1" x="414" y="1082"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -165,7 +165,7 @@
   </class>  
   <class id="19" language="java" name="GUILayer.MedicineUI" project="CourseProject" 
     file="/CourseProject/src/GUILayer/MedicineUI.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="256" width="300" x="652" y="1608"/>    
+    <position height="-1" width="-1" x="886" y="1452"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -174,7 +174,7 @@
   </class>  
   <class id="20" language="java" name="GUILayer.PacientGUI" project="CourseProject" 
     file="/CourseProject/src/GUILayer/PacientGUI.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1702" y="1395"/>    
+    <position height="-1" width="-1" x="864" y="195"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -183,7 +183,7 @@
   </class>  
   <class id="21" language="java" name="GUILayer.PersonGUI" project="CourseProject" 
     file="/CourseProject/src/GUILayer/PersonGUI.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1874" y="1938"/>    
+    <position height="-1" width="-1" x="854" y="1104"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -192,7 +192,7 @@
   </class>  
   <class id="22" language="java" name="ModelLayer.Appointment" project="CourseProject" 
     file="/CourseProject/src/ModelLayer/Appointment.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="-21" y="2451"/>    
+    <position height="-1" width="-1" x="2033" y="191"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -201,7 +201,7 @@
   </class>  
   <class id="23" language="java" name="ModelLayer.Doctor" project="CourseProject" 
     file="/CourseProject/src/ModelLayer/Doctor.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2408" y="2422"/>    
+    <position height="-1" width="-1" x="1958" y="1596"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -210,7 +210,7 @@
   </class>  
   <class id="24" language="java" name="ModelLayer.Medicine" project="CourseProject" 
     file="/CourseProject/src/ModelLayer/Medicine.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="863" y="2524"/>    
+    <position height="-1" width="-1" x="1303" y="1626"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -219,7 +219,7 @@
   </class>  
   <class id="25" language="java" name="ModelLayer.Person" project="CourseProject" 
     file="/CourseProject/src/ModelLayer/Person.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1769" y="2374"/>    
+    <position height="-1" width="-1" x="53" y="242"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -227,349 +227,409 @@
     </display>  
   </class>  
   <dependency id="26">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <dependency id="27">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="22"/>  
+  </dependency>  
+  <realization id="28">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <association id="29">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="30" name="medicineUI">        
+        <position height="0" width="0" x="-358" y="122"/>      
+      </attribute>      
+      <multiplicity id="31" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-358" y="122"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="32">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="33">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="34">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="35">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="36">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <dependency id="37">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="38">    
     <end type="SOURCE" refId="11"/>    
     <end type="TARGET" refId="22"/>  
   </dependency>  
-  <dependency id="27">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <realization id="28">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <dependency id="29">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="11"/>  
-  </dependency>  
-  <dependency id="30">    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="16"/>  
-  </dependency>  
-  <association id="31">    
-    <end type="SOURCE" refId="22" navigable="false">      
-      <attribute id="32" name="doctors"/>      
-      <multiplicity id="33" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="34">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="13"/>  
-  </dependency>  
-  <dependency id="35">    
-    <end type="SOURCE" refId="19"/>    
+  <dependency id="39">    
+    <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="24"/>  
   </dependency>  
-  <dependency id="36">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="22"/>  
-  </dependency>  
-  <association id="37">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="38" name="medicines"/>      
-      <multiplicity id="39" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="24" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
   <association id="40">    
-    <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="41" name="doctorCtr"/>      
-      <multiplicity id="42" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="41" name="persons">        
+        <position height="0" width="0" x="-1716" y="-2132"/>      
+      </attribute>      
+      <multiplicity id="42" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-1716" y="-2132"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="25" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="43">    
     <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="44" name="dbmedicine"/>      
-      <multiplicity id="45" minimum="0" maximum="1"/>    
+      <attribute id="44" name="dbmedicine">        
+        <position height="0" width="0" x="-180" y="316"/>      
+      </attribute>      
+      <multiplicity id="45" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-180" y="316"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <dependency id="46">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="8"/>  
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="6"/>  
   </dependency>  
   <dependency id="47">    
-    <end type="SOURCE" refId="17"/>    
+    <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="25"/>  
   </dependency>  
   <dependency id="48">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="49">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="50">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="51">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="22"/>  
+  </dependency>  
+  <dependency id="52">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="53">    
     <end type="SOURCE" refId="18"/>    
     <end type="TARGET" refId="21"/>  
   </dependency>  
-  <association id="49">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="50" name="instance"/>      
-      <multiplicity id="51" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="52">    
+  <realization id="54">    
     <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <dependency id="53">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="8"/>  
-  </dependency>  
-  <dependency id="54">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="23"/>  
-  </dependency>  
+    <end type="TARGET" refId="12"/>  
+  </realization>  
   <association id="55">    
-    <end type="SOURCE" refId="18" navigable="false">      
-      <attribute id="56" name="loginUI"/>      
-      <multiplicity id="57" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="58">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <dependency id="59">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="25"/>  
-  </dependency>  
-  <association id="60">    
     <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="61" name="medicineUI"/>      
-      <multiplicity id="62" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="19" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="63">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="24"/>  
-  </dependency>  
-  <association id="64">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="65" name="appCtr"/>      
-      <multiplicity id="66" minimum="0" maximum="1"/>    
+      <attribute id="56" name="appCtr">        
+        <position height="0" width="0" x="1382" y="290"/>      
+      </attribute>      
+      <multiplicity id="57" minimum="0" maximum="1">        
+        <position height="0" width="0" x="1382" y="290"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="67">    
+  <association id="58">    
     <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="68" name="dbDoctor"/>      
-      <multiplicity id="69" minimum="0" maximum="1"/>    
+      <attribute id="59" name="dbDoctor">        
+        <position height="0" width="0" x="258" y="8"/>      
+      </attribute>      
+      <multiplicity id="60" minimum="0" maximum="1">        
+        <position height="0" width="0" x="258" y="8"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="70">    
+  <dependency id="61">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="62">    
     <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="5"/>  
+    <end type="TARGET" refId="22"/>  
   </dependency>  
-  <realization id="71">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="11"/>  
-  </realization>  
-  <dependency id="72">    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="20"/>  
-  </dependency>  
-  <dependency id="73">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <dependency id="74">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="11"/>  
-  </dependency>  
-  <realization id="75">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="13"/>  
-  </realization>  
-  <dependency id="76">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <dependency id="77">    
+  <dependency id="63">    
     <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="8"/>  
+    <end type="TARGET" refId="11"/>  
   </dependency>  
-  <dependency id="78">    
-    <end type="SOURCE" refId="13"/>    
+  <association id="64">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="65" name="loginUI">        
+        <position height="0" width="0" x="-1106" y="-568"/>      
+      </attribute>      
+      <multiplicity id="66" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-1106" y="-568"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="67">    
+    <end type="SOURCE" refId="19"/>    
     <end type="TARGET" refId="24"/>  
   </dependency>  
-  <dependency id="79">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="12"/>  
-  </dependency>  
-  <dependency id="80">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <dependency id="81">    
-    <end type="SOURCE" refId="12"/>    
+  <dependency id="68">    
+    <end type="SOURCE" refId="16"/>    
     <end type="TARGET" refId="23"/>  
   </dependency>  
-  <dependency id="82">    
+  <dependency id="69">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="70">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="10"/>  
   </dependency>  
-  <dependency id="83">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="9"/>  
+  <dependency id="71">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="11"/>  
   </dependency>  
-  <dependency id="84">    
-    <end type="SOURCE" refId="3"/>    
+  <dependency id="72">    
+    <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="24"/>  
   </dependency>  
-  <dependency id="85">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <dependency id="86">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="23"/>  
-  </dependency>  
-  <association id="87">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="88" name="persons"/>      
-      <multiplicity id="89" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="25" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="90">    
-    <end type="SOURCE" refId="22" navigable="false">      
-      <attribute id="91" name="dbdoctor"/>      
-      <multiplicity id="92" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="93">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="15"/>  
-  </dependency>  
-  <dependency id="94">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <dependency id="95">    
-    <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="14"/>  
-  </dependency>  
-  <dependency id="96">    
+  <dependency id="73">    
     <end type="SOURCE" refId="14"/>    
     <end type="TARGET" refId="25"/>  
   </dependency>  
-  <dependency id="97">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="23"/>  
-  </dependency>  
-  <dependency id="98">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="13"/>  
-  </dependency>  
-  <dependency id="99">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <dependency id="100">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="22"/>  
-  </dependency>  
-  <dependency id="101">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <dependency id="102">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="10"/>  
-  </dependency>  
-  <dependency id="103">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <dependency id="104">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="10"/>  
-  </dependency>  
-  <dependency id="105">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <association id="106">    
+  <association id="74">    
     <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="107" name="doctors"/>      
-      <multiplicity id="108" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="109">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="22"/>  
-  </dependency>  
-  <association id="110">    
-    <end type="SOURCE" refId="20" navigable="false">      
-      <attribute id="111" name="personCtr"/>      
-      <multiplicity id="112" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="113">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="114" name="dbPerson"/>      
-      <multiplicity id="115" minimum="0" maximum="1"/>    
+      <attribute id="75" name="dbPerson">        
+        <position height="0" width="0" x="-58" y="-678"/>      
+      </attribute>      
+      <multiplicity id="76" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-58" y="-678"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="14" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="116">    
+  <dependency id="77">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="78">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <realization id="79">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <dependency id="80">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <association id="81">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="82" name="personCtr">        
+        <position height="0" width="0" x="292" y="-288"/>      
+      </attribute>      
+      <multiplicity id="83" minimum="0" maximum="1">        
+        <position height="0" width="0" x="292" y="-288"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="84">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <dependency id="85">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <association id="86">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="87" name="dbdoctor">        
+        <position height="0" width="0" x="1618" y="32"/>      
+      </attribute>      
+      <multiplicity id="88" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="1618" y="32"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="89">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="24"/>  
+  </dependency>  
+  <dependency id="90">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <association id="91">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="92" name="instance">        
+        <position height="0" width="0" x="-190" y="30"/>      
+      </attribute>      
+      <multiplicity id="93" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-190" y="30"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="94">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <dependency id="95">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <dependency id="96">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <association id="97">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="98" name="doctors">        
+        <position height="0" width="0" x="-450" y="-826"/>      
+      </attribute>      
+      <multiplicity id="99" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-450" y="-826"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="100">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="101">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="102">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="103">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <association id="104">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="105" name="medicines">        
+        <position height="0" width="0" x="440" y="-898"/>      
+      </attribute>      
+      <multiplicity id="106" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="440" y="-898"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="107">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <association id="108">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="109" name="doctorCtr">        
+        <position height="0" width="0" x="1034" y="972"/>      
+      </attribute>      
+      <multiplicity id="110" minimum="0" maximum="1">        
+        <position height="0" width="0" x="1034" y="972"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="111">    
     <end type="SOURCE" refId="15"/>    
     <end type="TARGET" refId="5"/>  
   </dependency>  
+  <dependency id="112">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="113">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="114">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="115" name="doctors">        
+        <position height="0" width="0" x="-450" y="-826"/>      
+      </attribute>      
+      <multiplicity id="116" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-450" y="-826"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <dependency id="117">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="12"/>  
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="16"/>  
   </dependency>  
   <dependency id="118">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="119">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="120">    
     <end type="SOURCE" refId="20"/>    
     <end type="TARGET" refId="25"/>  
   </dependency>  
-  <dependency id="119">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="25"/>  
-  </dependency>  
-  <realization id="120">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="12"/>  
-  </realization>  
   <dependency id="121">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="14"/>  
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="12"/>  
   </dependency>  
   <association id="122">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="123" name="personCtr"/>      
-      <multiplicity id="124" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="123" name="personCtr">        
+        <position height="0" width="0" x="292" y="-288"/>      
+      </attribute>      
+      <multiplicity id="124" minimum="0" maximum="1">        
+        <position height="0" width="0" x="292" y="-288"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <dependency id="125">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="7"/>  
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="8"/>  
   </dependency>  
-  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-    sort-features="false" accessors="true" visibility="true">    
+  <classifier-display autosize="false" stereotype="false" package="false" initial-value="false" signature="false" 
+    sort-features="false" accessors="true" visibility="false">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
     <operations public="true" package="true" protected="true" private="true" static="true"/>  
   </classifier-display>  
-  <association-display labels="true" multiplicity="true"/>
+  <association-display labels="false" multiplicity="false"/>
 </class-diagram>

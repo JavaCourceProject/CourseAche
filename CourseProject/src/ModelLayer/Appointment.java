@@ -20,7 +20,6 @@ public class Appointment {
 	private int medicine;
 	private ArrayList<Doctor> doctors = new ArrayList<Doctor>();
 	private ArrayList<DBDoctor> dbdoctor;
-	//private Doctor doctors;
 
 	public Appointment() {
 	}
@@ -36,7 +35,6 @@ public class Appointment {
 			+ "/nPacient: " + getPatient() 
 			+ "/nDoctor: " + getDoctor()
 			+ "/nMedicine: " + getMedicine();
-			//+ "/nDoctors: " + getDoctors();
 	}
 
 	public int getID() {
@@ -88,17 +86,6 @@ public class Appointment {
 	}
 	
 	public ArrayList<Doctor> getDoctors() {
-		
-//		try{System.out.println("tipo daltarskdn: " + dbdoctor.ge);
-//			for (DBDoctor p : dbdoctor ) {
-//				//System.out.println(p.getDoctor(doctors.get(2), true));
-//				
-//			}
-//			
-//		} catch (Exception e) {
-//			System.err.println("Caught IOException: " + e.getMessage());
-//		}
-		//doctor_name = this.doctors.get(2).getName();
 		return doctors;
 	}
 

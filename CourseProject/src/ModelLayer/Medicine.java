@@ -1,5 +1,5 @@
 /**
- * @author Jelizaveta Kuznecova
+ * @author Aurimas Blazys
  */
 package ModelLayer;
 

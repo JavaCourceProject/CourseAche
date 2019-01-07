@@ -1,5 +1,5 @@
 /**
- * @author Jelizaveta Kuznecova
+ * @author Aurimas Blazys
  */
 package GUILayer;
 
@@ -91,9 +91,6 @@ public class MedicineUI extends JPanel {
 		choicePanel = new JPanel();
 		choicePanel.setLayout(new FlowLayout());
 		choicePanel.setBorder(BorderFactory.createTitledBorder("Login"));
-		
-//		showAppPanel.add(choicePanel, BorderLayout.CENTER);
-
 		
 		IFDBMedicine dbMedicine = new DBMedicine();
 		ArrayList<Medicine> medicines = dbMedicine.getAllMedicines(true);
